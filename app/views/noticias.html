@@ -1,0 +1,43 @@
+<page-view title="Notícias">
+    <div class="row">
+        <div class="col s12 m6 l4" ng-repeat="noticia in vm.noticias | orderBy: '-data'">
+            <div class="card hoverable card-noticia">
+                <div class="card-content grey-text">
+                    <div class="card-title-box">
+                        <span class="card-title">{{noticia.titulo}}</span>
+                    </div>
+                    <p><small>{{noticia.data | date:'dd/MM/yyyy HH:mm'}}</small></p>
+                    <p class="truncate" ng-bind-html="noticia.mensagem"></p>
+                </div>
+                <div class="card-action grey lighten-5">
+                    <a href="#!/" ng-click="vm.verNoticia($index)">ver mais...</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light red" href="#!/novanoticia"><i class="material-icons">add</i></a>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modalNoticia" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>{{vm.noticia.titulo}}</h4>
+            <p>{{vm.noticia.data | date:'dd/MM/yyyy HH:mm'}}</p>
+
+            <p class="flow-text" ng-bind-html="vm.noticia.mensagem"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-action modal-close waves-effect waves-green btn">Fechar</button>
+        </div>
+    </div>
+</page-view>
+<script type="text/javascript">
+    if (isTouchDevice()) {
+        $('#modalNoticia').addClass('bottom-sheet modal-mobile')
+    }
+</script>

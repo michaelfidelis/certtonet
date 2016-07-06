@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    jQ('select').not('.disabled').material_select();
+</script>
+<page-view title="Nova Reserva">
+    <form>
+        <div class="row">
+
+            <div class="input-field col s10">
+                <select>
+                    <optgroup label="Salões">
+                        <option value="1">Salão de Festas 1</option>
+                        <option value="2">Salão de Festas 2</option>
+                    </optgroup>
+                    <optgroup label="Churrasqueiras">
+                        <option value="3">Churrasqueira 1</option>
+                        <option value="4">Churrasqueira 2</option>
+                    </optgroup>
+                </select>
+                <label>Local</label>
+            </div>
+            <br>
+            <br>
+            <div class="input-field col s10">
+                <input placeholder="Título" id="tituloNoticia" type="text" class="validate" ng-model="vm.noticia.titulo" maxlength="70" length="70" ng-required="true">
+                <label for="tituloNoticia">Título</label>
+            </div>
+
+            <div class="input-field col s10">
+                <textarea id="mensagem" class="materialize-textarea" ng-model="vm.noticia.mensagem" ng-required="true"></textarea>
+                <label for="mensagem">Mensagem</label>
+            </div>
+            <div class="input-field col s10">
+                <button ng-click="vm.adicionarNoticia();" class="waves-effect waves-light btn">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</page-view>
+
+<script type="text/javascript">
+    jQ(document).ready(function () {
+        jQ('select').material_select();
+    });
+    jQ('select').material_select();
+</script>

@@ -1,0 +1,24 @@
+<page-view title="Nova notícia">
+    <form>
+
+        <div class="row">
+            <div class="input-field col s10">
+                <input placeholder="Título" id="tituloNoticia" type="text" class="validate" ng-model="vm.noticia.titulo" maxlength="70" length="70" ng-required="true">
+                <label for="tituloNoticia">Título</label>
+            </div>
+
+            <div class="input-field col s10">
+                <textarea id="mensagem" class="materialize-textarea" ng-model="vm.noticia.mensagem" ng-required="true"></textarea>
+                <label for="mensagem">Mensagem</label>
+            </div>
+            <div class="input-field col s10">
+                <button ng-click="vm.adicionarNoticia();" class="waves-effect waves-light btn">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+</page-view>
+
+<script type="text/javascript">
+    $('#tituloNoticia').characterCounter();
+</script>

@@ -1,0 +1,22 @@
+<page-view title="Reservas">
+    <div class="row">
+        <article class="col s12 m6" ng-repeat="reserva in vm.reservas |orderBy: '-data'">
+            <ul class=" collection with-header ">
+                <li class="collection-header ">
+                    <h4>{{reserva.descricao}}</h4></li>
+                <li class="collection-item ">
+                    <strong>Data: </strong>{{reserva.data | date:'dd/MM/yyyy'}}
+                </li>
+                <li class="collection-item ">
+                    <strong>Local: </strong>{{reserva.local.nome}}
+                </li>
+                <li class="collection-item ">
+                    <strong>Responsável: </strong>{{reserva.responsavel}}
+                </li>
+            </ul>
+        </article>
+    </div>
+    <div class="fixed-action-btn ">
+        <a class="btn-floating btn-large waves-effect waves-light red" href="#!/novareserva"><i class="material-icons ">add</i></a>
+    </div>
+</page-view>

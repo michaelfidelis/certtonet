@@ -1,5 +1,3 @@
-var jQ = $.noConflict();
-
 (function (jQ) {
     jQ(function () {
 

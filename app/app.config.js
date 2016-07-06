@@ -3,9 +3,17 @@
 
     angular.module('app').config(AppConfig);
 
-    AppConfig.$inject = ['$routeProvider', '$locationProvider'];
+    AppConfig.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
 
-    function AppConfig($routeProvider, $locationProvider) {
+    function AppConfig($routeProvider, $locationProvider, $httpProvider) {
+
+
+        $httpProvider.interceptors.push('HttpInterceptor');
+        $httpProvider.defaults.transformRequest = function (data, headersGetter) {
+            // todo start the spinner here
+            jQ('#loader').show();
+            return data;
+        };
 
         $locationProvider.html5Mode({
             enabled: false,

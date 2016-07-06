@@ -32,6 +32,16 @@
                 controller: 'ReservaController',
                 controllerAs: 'vm',
             })
+            .when('/correspondencias', {
+                templateUrl: 'app/views/correspondencias.html',
+                controller: 'CorrespondenciaController',
+                controllerAs: 'vm',
+            })
+            .when('/anuncios', {
+                templateUrl: 'app/views/anuncios.html',
+                controller: 'AnuncioController',
+                controllerAs: 'vm',
+            })
             // caso não seja nenhum desses, redirecione para a rota '/'
             .otherwise({
                 redirectTo: '/'

@@ -27,7 +27,7 @@
 
                     <div class="container">
                         <div class="nav-wrapper">
-                            <strong class="brand-logo"> {{pageController.getTitle()}}</strong>
+                            <strong class="brand-logo" ng-cloak>{{pageController.getTitle()}}</strong>
                         </div>
                     </div>
                 </nav>
@@ -43,8 +43,8 @@
                 </li>
                 <li class="bold"><a href="#!/noticias">Notícias</a></li>
                 <li class="bold"><a href="#!/reservas">Reservas</a></li>
-                <li class="bold"><a href="#!/">Anúncios</a></li>
-                <li class="bold"><a href="#!/">Correspondências</a></li>
+                <li class="bold"><a href="#!/anuncios">Anúncios</a></li>
+                <li class="bold"><a href="#!/correspondencias">Correspondências</a></li>
 
             </ul>
 
@@ -66,18 +66,19 @@
     <script type="text/javascript" src="app/page/page.service.js"></script>
     <script type="text/javascript" src="app/noticia/noticia.service.js"></script>
     <script type="text/javascript" src="app/reserva/reserva.service.js"></script>
-    <script type="text/javascript" src="app/local/local.service.js"></script>
+    <script type="text/javascript" src="app/anuncio/anuncio.service.js"></script>
+    <script type="text/javascript" src="app/correspondencia/correspondencia.service.js"></script>
 
     <script type="text/javascript" src="app/page/page.controller.js"></script>
     <script type="text/javascript" src="app/noticia/noticia.controller.js"></script>
     <script type="text/javascript" src="app/reserva/reserva.controller.js"></script>
+    <script type="text/javascript" src="app/anuncio/anuncio.controller.js"></script>
+    <script type="text/javascript" src="app/correspondencia/correspondencia.controller.js"></script>
     <script type="text/javascript" src="app/page/page.directive.js"></script>
 
     <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/init.js"></script>
-
-
 </body>
 
 </html>
